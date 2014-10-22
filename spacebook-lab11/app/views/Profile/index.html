@@ -1,0 +1,45 @@
+#{extends 'main.html' /}
+#{set title:'Profile' /}
+
+<nav class="ui menu inverted">
+	<header class="header item"> Spacebook </header>
+	<a class="ui active item" href="/home"><i class= "home icon"></i>Home</a> 
+	<a class="ui item" href="/members"><i class= "users icon"></i>Members</a> 
+	<a class="ui item" href="/profile"><i class= "user icon"></i>Profile</a> 
+	<a class="ui item" href="/leaderboard"><i class="list icon"></i>Leaderboard</a>
+    </div>
+	<div class="right menu">
+	<a class="ui active item" href="/editprofile"><i class= "edit icon"></i>Edit Profile</a>
+	<a class="ui item" href="/login"><i class= "off icon"></i>Logout</a>
+	</div>
+	
+<section class="ui segment">
+  <h2 class="ui header">${user.firstName} ${user.lastName}'s Profile (${user.email})</h2>
+  <div class="ui two column grid segment">
+    <div class="ui row">
+      <div class="ui column">
+        <p>
+          <img src="/profile/getpicture/${user.id}">
+        </p>
+        <form action="/profile/uploadpicture/${user.id}" method="post" enctype="multipart/form-data">    
+          <input type="file" name="picture" /> 
+          <input type="submit" name="submit" value="upload" />
+        </form>
+      <h2 class="ui header"> Age ${user.age}</h2>
+      <h2 class="ui header"> Nationality ${user.nationality}</h2>
+      </div>
+      <div class="ui column form segment">
+        <h2 class="ui small header"> Status</h2>
+        <div class="ui green block label">
+          <p> ${user.statusText} </p>
+        </div>
+        <hr>
+        <form action="/profile/changestatus" method="post">
+          <h3 class="ui inverted green block header">Enter Status</h3>
+          <textarea class="ui field" name="profiletext"> </textarea>
+          <input class="ui green button" type="submit" name="submit" value="Change"/>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

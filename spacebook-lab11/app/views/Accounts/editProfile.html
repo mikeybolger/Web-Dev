@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'Edit Profile' /}
+
+<nav class="ui menu">
+  <a class="active item" href="/signup"> Signup  </a>
+  <a class="item" href="/login">  Login   </a>
+</nav> 
+<section class="ui form segment">
+  <form action="/register" method="POST">
+
+  <div class="two fields">
+    <div class="field">
+      <label>Age</label>
+      <input placeholder="Age" type="text" name="Age">
+    </div>
+    <div class="field">
+      <label>Nationality</label>
+      <input placeholder="Nationality" type="text" name="Nationality">
+    </div>
+   </div>>
+    <div class="field">
+      <label>Password</label>
+      <input placeholder="Password" type="password" name="password">
+    </div>
+  </form>
+</section>  

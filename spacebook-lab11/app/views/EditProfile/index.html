@@ -1,0 +1,21 @@
+#{extends 'main.html' /} #{set title:'Edit Details' /}
+
+<nav class="ui inverted menu">
+	<header class="header item"> Spacebook </header>
+	<div class="right menu">
+		<a class="active item" href="/profile"><i class= "user icon"></i> Profile </a>
+	</div>
+</nav>
+<div class="ui raised form segment">
+	<form action="/editprofile/change" method="POST">
+		<div class="two fields">
+			<div class="field">
+				<label>Nationality</label> <input placeholder="Nationality"
+					type="text" name="nationality">
+			</div>
+			<div class="field">
+				<label>Age</label> <input placeholder="Age" type="text" name="age">
+			</div>
+		<button class="ui green submit button">Submit</button>
+	</form>
+</div>

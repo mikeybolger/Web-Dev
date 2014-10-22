@@ -1,0 +1,48 @@
+#{extends 'main.html' /} #{set title:'Leaderboard' /}
+
+<nav class="ui menu inverted">
+	<header class="header item"> Spacebook </header>
+	<a class="ui active item" href="/home"><i class="home icon"></i>Home</a>
+	<a class="ui item" href="/members"><i class="users icon"></i>Members</a>
+	<a class="ui item" href="/profile"><i class="user icon"></i>Profile</a>
+	<a class="ui item" href="/leaderboard"><i class="list icon"></i>Leaderboard</a>
+	<div class="right menu">
+		<a class="ui item" href="/login"><i class="off icon"></i>Logout</a>
+	</div>
+</nav>
+
+<section class="ui segment">
+	<h2 class="ui header">
+		<i class="list icon"></i>Social Leaderboard
+	</h2>
+	<div class="ui list">
+		<ol>
+			#{list items:users, as:'user'}
+			<li>${user.firstName} ${user.lastName}
+				(inbox-${user.inbox.size()} outbox-${user.outbox.size()}
+				friends-${user.friendships.size()})</li>
+			<br> #{/list}
+		</ol>
+	</div>
+	<section class="ui two column grid segment">
+		<div class="row">
+			<div class=" column ui small green buttons">
+				<form action="/leaderboard/sortByFriends">
+					<input class="ui grey button" type="submit" name="submit"
+						value="Most Social" />
+				</form>
+				<div class="or"></div>
+				<form action="/leaderboard/sortByMessages">
+					<input class="ui grey button" type="submit" name="submit"
+						value="Most Talktative" />
+				</form>
+			</div>
+		</div>
+	</section>
+</section>
+
+
+
+
+
+

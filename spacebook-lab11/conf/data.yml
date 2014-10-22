@@ -1,0 +1,102 @@
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    age: 38
+    nationality: American
+    email: homer@simpson.com
+    password: secret
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    age: 38
+    nationality: American
+    email: marge@simpson.com
+    password: secret
+  
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    age: 10
+    nationality: American 
+    email: bart@simpson.com
+    password: secret
+
+User(lisa):
+    firstName: Lisa
+    lastName: Simpson
+    age: 8
+    nationality: American
+    email: lisa@simpson.com
+    password: secret
+
+User(barney):
+    firstName: Barney
+    lastName: Gumble
+    age: 39
+    nationality: American
+    email: barney@gumble.com
+    password: secret
+
+User(moe):
+    firstName: Moe
+    lastName: Sizlak
+    age: 40
+    nationality: Italian
+    email: moe@moes.com
+    password: secret
+    
+Friendship(homer-marge): 
+    sourceUser : homer
+    targetUser : marge
+    
+Friendship(marge-homer): 
+    sourceUser : marge
+    targetUser : homer    
+
+Friendship(homer-lisa): 
+    sourceUser : homer
+    targetUser : lisa    
+
+Friendship(lisa-homer): 
+    sourceUser : lisa
+    targetUser : homer 
+    
+Message(message1):
+    from : marge
+    to   : homer
+    messageText: 'Where are You off to?'
+    dateSent: "2014-06-06"
+
+Message(message2):
+    from : homer
+    to   : marge
+    messageText: 'Im off to the pub?'
+    dateSent: "2014-06-07"
+    
+Message(message3):
+    from : lisa
+    to   : homer
+    messageText: 'Why are you not at work?'
+    dateSent: "2014-06-08"
+
+Message(message4):
+    from : marge
+    to   : homer
+    messageText: 'Why are you going to the pub?'
+    dateSent: "2014-06-09"
+
+Message(message5):
+    from : homer
+    to   : marge
+    messageText: 'Doh!'
+    dateSent: "2014-06-10"
+    
+Message(message6):
+    from : lisa
+    to   : homer
+    messageText: 'Explain Yourself?'
+    dateSent: "2014-06-11"
+                  
+
+    
