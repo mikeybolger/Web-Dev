@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:label="My new title" >
+
+    <Button
+        android:id="@+id/tweet_reportButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/tweet_report" />
+
+    <TextView
+        android:id="@+id/tweet_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contact"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="@string/todaysDate" />
+
+    <Button
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tweet_reportButton"
+        android:layout_alignParentLeft="true"
+        android:text="@string/contact" />
+
+    <EditText
+        android:id="@+id/tweet_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tweet_date"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tweet_button"
+        android:ems="10"
+        android:hint="@string/text_hint"
+        android:maxLength="140" />
+
+    <TextView
+        android:id="@+id/CharsRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="38dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="5dp"
+        android:textSize="20sp"
+        android:text="@string/max_length"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/tweet_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/CharsRemaining"
+        android:layout_alignBottom="@+id/CharsRemaining"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="37dp"
+        android:text="@string/tweet_button" />
+
+</RelativeLayout>
